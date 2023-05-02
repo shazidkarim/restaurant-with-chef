@@ -13,6 +13,7 @@ const NavBar = () => {
             <Link className='me-3' to={'/home'}> <button>Home</button> </Link>
             <Link className='me-3' to={'/blog'}><button>Blog</button></Link>
             <Link className='me-3' to={'/login'}><button>Login</button></Link>
+            <Link className='me-3' to={'/signup'}><button>Sign Up</button></Link>
           </Nav>
         </Container>
       </Navbar>

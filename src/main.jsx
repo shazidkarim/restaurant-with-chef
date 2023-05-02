@@ -11,6 +11,8 @@ import {
 import Home from './pages/HomePage/Home.jsx';
 import Blog from './pages/BlogPage/Blog.jsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
+import Login from './pages/Login/Login.jsx';
+import SignUp from './pages/SignUp/SignUp.jsx';
 
 
 const router = createBrowserRouter([
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
       {
         path:"/blog",
         element:<Blog></Blog>
+      },
+      {
+        path:"/login",
+        element:<Login></Login>
+      },
+      {
+        path:"/signup",
+        element:<SignUp></SignUp>
       },
       
     ]
