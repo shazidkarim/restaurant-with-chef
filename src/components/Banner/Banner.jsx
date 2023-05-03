@@ -4,10 +4,12 @@ import Carousel from 'react-bootstrap/Carousel';
 import bannerImg1 from '../../assets/recipe 1.jpg';
 import bannerImg2 from '../../assets/recipe2.jpg';
 import bannerImg3 from '../../assets/recipe3.webp'
+import { Container } from 'react-bootstrap';
 
 const Banner = () => {
     return (
-        <Carousel>
+       <Container>
+         <Carousel>
       <Carousel.Item>
         <img
           className="d-block w-100 img-fluid"
@@ -46,6 +48,7 @@ const Banner = () => {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+       </Container>
     );
 };
 
