@@ -13,6 +13,15 @@ const Login = () => {
         const email = form.email.value;
         const password =form.password.value;
         console.log(email,password)
+        signIn(email,password)
+        .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            form.reset();
+        })
+        .catch(error=>{
+            console.log(error)
+        })
     }
     return (   
            <div className='form-control w-25 mt-5 mx-auto border  justify-content-center align-items-center p-4'>

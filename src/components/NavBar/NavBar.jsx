@@ -5,11 +5,19 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const NavBar = () => {
-  const {user} =useContext(AuthContext);
+  const {user, logOut} =useContext(AuthContext);
   console.log(user)
+  const handleSignOut = ()=>{
+    logOut()
+    .then(result=>{
+
+    })
+    .catch(error=>
+      console.error(error))
+  }
     return (
         <Container>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="primary" variant="dark">
         <Container>
           <Navbar.Brand className='fst-italic' href="#home">CHEF RECIPE</Navbar.Brand>
           <Nav className="m-auto">
@@ -18,7 +26,7 @@ const NavBar = () => {
             <Link className='me-3' activeClassName='active' to={'/login'}><button className='btn btn-primary'>Login</button></Link>
             <Link className='me-3' activeClassName='active' to={'/signup'}><button className='btn btn-primary'>Sign Up</button></Link>
             {
-              user && <span>welcome{user.email}</span>
+              user && <span>welcome{user.email} <button className='btn btn-primary' onClick={handleSignOut}>Log out</button></span>
             }
           </Nav>
         </Container>
