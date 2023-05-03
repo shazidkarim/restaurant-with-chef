@@ -15,6 +15,7 @@ import Login from './pages/Login/Login.jsx';
 import SignUp from './pages/SignUp/SignUp.jsx';
 import AuthProvider from './components/Provider/AuthProvider.jsx';
 import PrivateRoute from './routes/PrivateRoute.jsx';
+import ChefDetails from './components/ChefDetails/ChefDetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path:"/signup",
         element:<SignUp></SignUp>
+      },
+      {
+        path:"/chefdetails",
+        element:<ChefDetails></ChefDetails>
       },
       
     ]

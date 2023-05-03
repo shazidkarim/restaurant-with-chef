@@ -26,7 +26,7 @@ const NavBar = () => {
             <Link className='me-3' activeClassName='active' to={'/login'}><button className='btn btn-primary'>Login</button></Link>
             <Link className='me-3' activeClassName='active' to={'/signup'}><button className='btn btn-primary'>Sign Up</button></Link>
             {
-              user && <span>welcome{user.email} <button className='btn btn-primary' onClick={handleSignOut}>Log out</button></span>
+              user && <span>{user.email} <button className='btn btn-primary' onClick={handleSignOut}>Log out</button></span>
             }
           </Nav>
         </Container>
