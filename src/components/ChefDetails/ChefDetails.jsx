@@ -22,7 +22,7 @@ const ChefDetails = () => {
 
     return (
         <div>
-            <h1 className='text-center text-primary'>Meet our chefs</h1>
+            <h1 className='text-center text-primary mt-5 mb-4'>Meet our chefs</h1>
             <Container>
   <Row xs={1} md={2} className="g-4">
     {chefs.map((chef) => (
