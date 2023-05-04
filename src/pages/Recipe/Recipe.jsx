@@ -1,13 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const Recipe = () => {
+    const { id } = useParams();
     const [recipe, setrecipe] = useState([]);
 
     useEffect(() => {
         const fetchRecipe = async () => {
             try {
-                const res = await fetch('http://localhost:5000/chef');
+                const res = await fetch('http://localhost:5000/recipe');
                 const data = await res.json();
                 setrecipe(data?.chefs);
             } catch (error) {
@@ -18,7 +20,7 @@ const Recipe = () => {
     }, []);
     return (
         <div>
-            <h1>this is recipe</h1>
+            <h1>this is recipe:{}</h1>
         </div>
     );
 };

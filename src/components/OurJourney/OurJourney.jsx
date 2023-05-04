@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 
 const OurJourney = () => {
     return (
-        <div className='mt-4'>
+        <div className='mt-4 mb-4'>
             <Container className='bg-succe border'>
                 <div>
                     <div className=' d-flex align-items-center justify-content-center'>

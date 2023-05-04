@@ -72,10 +72,12 @@ const Login = () => {
       <Button variant="primary" type="submit">
         Login
       </Button>
+      <div>
       <p className='text-danger'>{error.message}</p>
       <p><small>new to website? please 
         <Link to={'/signup'}> Sign Up</Link>
         </small></p>
+      </div>
     </Form>
         </Container>
         <div>
