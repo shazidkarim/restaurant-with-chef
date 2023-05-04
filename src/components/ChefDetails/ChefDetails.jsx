@@ -20,35 +20,40 @@ const ChefDetails = () => {
         fetchChefs();
     }, []);
 
-    console.log(chefs);
     return (
         <div>
             <h1 className='text-center text-primary'>Meet our chefs</h1>
-            {
-                chefs && chefs.map(chef => <div key={chef.id}>
-                    <Container>
-                        <Row xs={1} md={2} className="g-4">
-                            {Array.from({ length: 2 }).map((_, idx) => (
-                                <Col key={idx}>
-                                    <Card>
-                                        <Card.Img variant="top" src={chef.picture} />
-                                        <Card.Body>
-                                            <Card.Title> <h1>Name : {chef.name}</h1></Card.Title>
-                                            <Card.Text>
-                                                <h6>experience:{chef.yearsOfExperience} year</h6>
-                                                <h6>total receipt:{chef.numRecipes}</h6>
-                                                <p>total likes:{chef.likes}</p>
-                                            </Card.Text>
-                                        </Card.Body>
-                                        <button className='btn btn-primary'><Link to={`/recipe/${chef.id}`} className='btn btn-primary'>view recipe</Link>
-                                            </button>
-                                    </Card>
-                                </Col>
-                            ))}
-                        </Row>
-                    </Container>
-                </div>)
-            }
+            <Container>
+  <Row xs={1} md={2} className="g-4">
+    {chefs.map((chef) => (
+      <Col key={chef.id}>
+        <CardGroup>
+          <Card>
+            <Card.Img variant="top" src={chef.picture} />
+            <Card.Body>
+              <Card.Title>
+                <h1>Name: {chef.name}</h1>
+              </Card.Title>
+              <Card.Text>
+                <h6>Experience: {chef.yearsOfExperience} year</h6>
+                <h6>Total Receipt: {chef.numRecipes}</h6>
+                <p>Total Likes: {chef.likes}</p>
+              </Card.Text>
+              <button className="btn btn-primary">
+                <Link
+                  to={`/recipe/${chef.id}`}
+                  className="btn btn-primary"
+                >
+                  View Recipe
+                </Link>
+              </button>
+            </Card.Body>
+          </Card>
+        </CardGroup>
+      </Col>
+    ))}
+  </Row>
+</Container>
         </div>
     );
 };
