@@ -40,12 +40,12 @@ const router = createBrowserRouter([
         path:"/signup",
         element:<SignUp></SignUp>
       },
-      {
-        path:"/chefdetails",
-        element:<ChefDetails></ChefDetails>
-      },
       
     ]
+  },
+  {
+    path:"/chef",
+    element:<ChefDetails></ChefDetails>,
   },
 ]);
 
