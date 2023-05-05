@@ -50,6 +50,15 @@ const router = createBrowserRouter([
    
   },
   {
+    path:"/chef/:id",
+    element:<ChefDetails></ChefDetails>,
+   
+  },
+  {
+    path:"/recipe",
+    element:<PrivateRoute><Recipe></Recipe></PrivateRoute>,
+  },
+  {
     path:"/recipe/:id",
     element:<PrivateRoute><Recipe></Recipe></PrivateRoute>,
   },

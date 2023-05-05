@@ -10,7 +10,7 @@ const ChefDetails = () => {
     useEffect(() => {
         const fetchChefs = async () => {
             try {
-                const res = await fetch('https://b7a10-chef-recipe-hunter-server-side-shazidkarim-shazidkarim.vercel.app/chef');
+                const res = await fetch('https://b7a10-chef-recipe-hunter-server-side-shazidkarim.vercel.app/chef');
                 const data = await res.json();
                 setChefs(data?.chefs);
             } catch (error) {

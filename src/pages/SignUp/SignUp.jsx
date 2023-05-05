@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../components/Provider/AuthProvider';
+import Footer from '../../components/Footer/Footer';
 
 const SignUp = () => {
     const[error,setError] =useState('');
@@ -36,8 +37,8 @@ const SignUp = () => {
         })
     }
     return (
-        <div className='form-control w-25 mt-5 mx-auto border  justify-content-center align-items-center p-4'>
-             <Container>
+        <div>
+             <Container  className='form-control w-25 mt-5 mx-auto border  justify-content-center align-items-center p-4'>
             <Form onSubmit={handleSignUp}>
       <Form.Group className="mb-3">
         <Form.Label>Your name</Form.Label>
@@ -70,6 +71,7 @@ const SignUp = () => {
         </small></p>
     </Form>
         </Container>
+        <Footer></Footer>
            </div>
     );
 };

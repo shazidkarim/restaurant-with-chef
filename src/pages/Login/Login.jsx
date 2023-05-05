@@ -5,6 +5,7 @@ import './Login.css'
 import backgroundImg from '../../assets/background image.jpg';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/Provider/AuthProvider';
+import Footer from '../../components/Footer/Footer';
 const Login = () => {
     const[error,setError] =useState('');
     const[user,setUser] = useState('');
@@ -58,8 +59,8 @@ const Login = () => {
         })
     }
     return (   
-           <div className='form-control w-25 mt-5 mx-auto border  justify-content-center align-items-center p-4'>
-             <Container>
+           <div>
+             <Container  className='form-control w-25 mt-5 mx-auto border  justify-content-center align-items-center p-4'>
             <Form onSubmit={handleLogIn}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
@@ -81,13 +82,14 @@ const Login = () => {
     </Form>
         </Container>
         <div>
-        <p className='text-danger'>{error}</p>
+        <p className='text-danger'>{error.message}</p>
         </div>
-        <div className='m-auto text-center'>
+        <div className='m-auto text-center mb-5'>
         <button onClick={handleGoogleSignIn} className='btn btn-primary mt-3'>sign in with google</button>
         <br />
         <button onClick={handleGithubSignIn} className='btn btn-primary mt-3'>sign in with github</button>
         </div>
+        <Footer></Footer>
            </div>
        
     );
